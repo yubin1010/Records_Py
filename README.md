@@ -1,2 +1,2 @@
-# Records_Py
+# Records
 Practice Python
