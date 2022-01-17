@@ -44,7 +44,8 @@ import selenium
 headers = {"User-Agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36"}
 
 def weather():
-    url = "https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=%EC%98%A4%EB%8A%98%EC%9D%98+%EB%82%A0%EC%94%A8"
+    #url = "https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=%EC%98%A4%EB%8A%98%EC%9D%98+%EB%82%A0%EC%94%A8"
+    url = "https://search.naver.com/search.naver?where=nexearch&query=%EC%84%9C%EC%9A%B8+%EC%98%A4%EB%8A%98%EC%9D%98+%EB%82%A0%EC%94%A8&ie=utf8&sm=tab_she&qdt=0"
     res = requests.get(url, headers=headers)
     res.raise_for_status()
     soup = BeautifulSoup(res.text, "lxml")
